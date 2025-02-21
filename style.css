@@ -1,0 +1,54 @@
+/* police */
+
+body {
+    font-family: "Teko", serif;
+    font-size: larger;
+    font-weight: 600;
+    background-image: url(zetong-li-CkPACFj8IXY-unsplash.jpg);
+    background-size: cover;
+    height: 100vh;
+    /*background-repeat: no-repeat; si je prefere que l'image prenne toute la largeur mais sans se répéter en bas*/
+}
+
+.question {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border: solid;
+    border-radius: 8px;
+    padding: 8px;
+    margin-left: 33%;
+    margin-right: 33%;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    background-color: rgba(240, 255, 255, 0.815);
+}
+
+.answers {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.answers button {
+    font-family: "Teko", serif;
+    font-size: large;
+    font-weight: 333;
+    border-radius: 5px;
+    background-color: rgba(245, 245, 220, 0.822);
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 4%;
+}
+
+.next-button, .replay-button {
+    border-radius: 5px;
+    font-family: "Teko", serif;
+    font-size: medium;
+    background-color: rgba(240, 255, 255, 0.929);
+}
