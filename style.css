@@ -36,7 +36,9 @@ body {
     font-family: "Teko", serif;
     font-size: large;
     font-weight: 333;
+    color: rgb(39, 35, 35);
     border-radius: 5px;
+    border-width: 0.2em;
     background-color: rgba(245, 245, 220, 0.822);
 }
 
@@ -51,4 +53,10 @@ body {
     font-family: "Teko", serif;
     font-size: medium;
     background-color: rgba(240, 255, 255, 0.929);
+}
+
+.score-text {
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
