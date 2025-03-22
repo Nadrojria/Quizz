@@ -8,35 +8,15 @@ body {
     background-position: center;
 }
 
-.timer {
-    text-align: center;
-    margin-top: 5%;
-}
 
-progress {
-    margin: auto;
-    display: flex;
-    width: 20%;
-    border: none;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-progress::-webkit-progress-bar {
-    background-color: rgba(245, 245, 220, 0.822);
-}
-
-progress::-webkit-progress-value {
-    background-color: #ec9442;
-    border-radius: 10px;
-    transition: width 0.5s ease-in-out;
-}
-
+/*****QUESTION REPONSES******
+*********SCORE*************/
 .question {
     display: flex;
     justify-content: center;
     text-align: center;
     border: solid;
+    font-size: 40px;
     border-radius: 8px;
     padding: 8px;
     margin-left: 33%;
@@ -56,14 +36,57 @@ progress::-webkit-progress-value {
 
 .answers button {
     font-family: "Teko", serif;
-    font-size: large;
+    font-size: 30px;
     font-weight: 333;
     color: rgb(39, 35, 35);
-    border-radius: 5px;
-    border-width: 0.2em;
+    border-radius: 8px;
+    border-width: 0.1em;
     background-color: rgba(245, 245, 220, 0.822);
 }
 
+.answers button:hover {
+    transition: transform 0.4s;
+    transform: scale(1.1);
+}
+
+.score-text {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;
+}
+
+
+/***TIMER ET PROGRESSBAR****
+****************************/
+.timer {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 5%;
+}
+
+progress {
+    margin: auto;
+    display: flex;
+    width: 20%;
+    border: 0.1rem, solid;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+progress::-webkit-progress-bar {
+    background-color: rgba(245, 245, 220, 0.822);
+}
+
+progress::-webkit-progress-value {
+    background-color: #ec9442;
+    border-radius: 10px;
+    transition: width 0.5s ease-in-out;
+}
+
+
+/*******BOUTONS***********
+*************************/
 .button-container {
     display: flex;
     justify-content: center;
@@ -73,12 +96,12 @@ progress::-webkit-progress-value {
 .next-button, .replay-button {
     border-radius: 5px;
     font-family: "Teko", serif;
-    font-size: medium;
+    font-size: 20px;
     background-color: rgba(240, 255, 255, 0.929);
 }
 
-.score-text {
-    display: flex;
-    justify-content: center;
-    text-align: center;
+.next-button:hover, .replay-button:hover {
+    transition: transform 0.4s;
+    transform: scale(1.1);
 }
+

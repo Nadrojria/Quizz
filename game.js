@@ -53,10 +53,10 @@ function scoringText () {
 function colorAnswerAndScore (check, responsButton) {
     if (check) {
         score++;
-        responsButton.style.borderColor = 'green';
+        responsButton.style.backgroundColor = '#00b33c';
     } else {
-        responsButton.style.borderColor = 'red';
-        correctButton.style.borderColor = 'green';
+        responsButton.style.backgroundColor = '#cc0000';
+        correctButton.style.backgroundColor = '#00b33c';
     } 
 };
 
@@ -81,14 +81,14 @@ function displayQuestionAndAnswers () {
     }) 
 }
 
-function countdown() { // SetInterval appelle une fonction au bout d'un délai prédéfini, ici 1000ms
+function countdown() { 
     let counter = 24;
     if (timer) { //Nettoie le timer précédent avant d'en mettre un nouveau
         clearInterval(timer);
     }
     countdownTimer.innerText = `Temps restant : ${counter} secondes`; //MAJ affichage
     
-    timer = setInterval(function () {
+    timer = setInterval(function () { // SetInterval appelle une fonction au bout d'un délai prédéfini, ici 1000ms
         counter--;
         countdownTimer.innerText = `Temps restant : ${counter} secondes`;
         if (counter == 0) {
