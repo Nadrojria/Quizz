@@ -1,4 +1,4 @@
-import { quiz_nba } from './questions.js'; // Import des questions
+import { quiz_nba } from './questions.js';
 
 /********RECUP HTML********
 ***********************/
@@ -73,7 +73,7 @@ function displayQuestionAndAnswers () {
         answerButton.addEventListener('click', () => {
             let verifyAnswer = checkAnswer(answerButton.innerText, correctAnswer);
             colorAnswerAndScore(verifyAnswer, answerButton);
-            nextButton.disabled = false; // Active le bouton suivant
+            nextButton.disabled = false; 
             document.querySelectorAll('#answers button').forEach(elem => { //Désactive les réponses
                 elem.disabled = true;
             })
@@ -86,9 +86,9 @@ function countdown() {
     if (timer) { //Nettoie le timer précédent avant d'en mettre un nouveau
         clearInterval(timer);
     }
-    countdownTimer.innerText = `Temps restant : ${counter} secondes`; //MAJ affichage
+    countdownTimer.innerText = `Temps restant : ${counter} secondes`; 
     
-    timer = setInterval(function () { // SetInterval appelle une fonction au bout d'un délai prédéfini, ici 1000ms
+    timer = setInterval(function () {
         counter--;
         countdownTimer.innerText = `Temps restant : ${counter} secondes`;
         if (counter == 0) {
@@ -112,21 +112,21 @@ function displayBar() {
   };
 
 function scorePage () {
-    answersText.innerHTML = ''; // Effacer les réponses
-    countdownTimer.style.display = 'none'; // Enleve le timer
+    answersText.innerHTML = ''; 
+    countdownTimer.style.display = 'none'; 
     progressBar.style.display = 'none';
     questionText.innerText = `Ton score est de ${score}/5`;
     scoringText(); // phrase en fonction du score
     scoreText.style.display = 'block';
-    nextButton.style.display = 'none'; // Enleve le bouton Suivant
-    replayButton.style.display = 'inline-block'; // Ajoute le bouton rejouer
+    nextButton.style.display = 'none'; 
+    replayButton.style.display = 'inline-block'; 
 }
 
 /****FONCTION PRINCIPALE****
 **************************/
 function loadQuestion() {
-    answersText.innerHTML = ''; // Vider le conteneur des options
-    nextButton.disabled = true; // désactive bouton suivant 
+    answersText.innerHTML = ''; 
+    nextButton.disabled = true; 
     displayQuestionAndAnswers();
     countdown();
     displayBar();
@@ -151,8 +151,8 @@ replayButton.addEventListener('click', () => {
     score = 0;
     countdownTimer.style.display = 'block'; // Ajoute le timer
     progressBar.style.display = 'block'; // Ajoute la barre de progression
-    replayButton.style.display = 'none'; // Enleve le bouton rejouer
-    nextButton.style.display = 'inline-block'; // Ajoute le bouton suivant
+    replayButton.style.display = 'none';
+    nextButton.style.display = 'inline-block';
     scoreText.innerHTML = '';
     loadQuestion();
 });
